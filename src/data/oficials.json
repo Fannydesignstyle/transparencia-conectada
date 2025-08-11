@@ -1,0 +1,26 @@
+[
+  {
+    "id": "estefania-perez-vazquez",
+    "name": "Estefanía Pérez Vázquez",
+    "position": "Fundadora de Fanny Design Style",
+    "dependency": "Transparencia Conectada",
+    "description": "Creadora de la plataforma Transparencia Conectada",
+    "location": "Oaxaca de Juárez, OAX, México",
+    "lastUpdated": "agosto 2025",
+    "profile": "Estefanía es una diseñadora estratégica y gestora de innovación cívica. Fundadora de Fanny Design Style y creadora de Transparencia Conectada, una plataforma que impulsa la transparencia institucional desde la ciudadanía. Su enfoque combina estética, funcionalidad y participación social.",
+    "skills": [
+      "Diseño institucional y branding profesional",
+      "Narrativas visuales con impacto emocional",
+      "Integración de herramientas como QR y Azure Insights",
+      "Desarrollo de plataformas escalables y seguras",
+      "Presentaciones visuales para equipos técnicos y ciudadanos"
+    ],
+    "objectives": [
+      "Refinar la estructura visual de la plataforma",
+      "Integrar métricas en tiempo real con Azure Application Insights",
+      "Empoderar equipos institucionales con herramientas de autogestión",
+      "Inspirar transformación social a través del diseño y la narrativa"
+    ],
+    "photo": "/images/estefania-perez.jpg"
+  }
+]

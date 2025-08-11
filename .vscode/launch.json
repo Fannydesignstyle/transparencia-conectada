@@ -1,0 +1,50 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Vite Dev Server",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev",
+      "serverReadyAction": {
+        "pattern": "Local: (http://[^\\s]+)",
+        "uriFormat": "%s",
+        "action": "debugWithChrome"
+      },
+      "presentation": {
+        "hidden": false,
+        "group": "build"
+      }
+    },
+    {
+      "name": "Launch Chrome against localhost",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///src/*": "${workspaceFolder}/src/*"
+      }
+    },
+    {
+      "name": "Debug Vite Server",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "restart": true,
+      "timeout": 30000
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Server and Client",
+      "configurations": ["Launch Vite Dev Server", "Launch Chrome against localhost"],
+      "stopAll": true,
+      "presentation": {
+        "hidden": false,
+        "group": "build"
+      }
+    }
+  ]
+}
