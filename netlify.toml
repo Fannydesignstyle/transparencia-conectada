@@ -1,0 +1,22 @@
+# Configuración de despliegue para Netlify
+
+[build]
+  # Comando para construir el sitio
+  command = "npm run build"
+  
+  # Directorio que Netlify desplegará
+  publish = "dist"
+
+[dev]
+  # Comando para el entorno de desarrollo local
+  command = "npm run dev"
+  
+  # Puerto para el servidor de desarrollo
+  port = 5173
+
+# Regla de redirección para aplicaciones de una sola página (SPA)
+# Esto asegura que todas las rutas sean manejadas por index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
