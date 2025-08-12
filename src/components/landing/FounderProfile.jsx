@@ -21,7 +21,7 @@ const FounderProfile = () => {
                 <div className="h-full bg-primary-blue p-8 text-white flex flex-col items-center text-center">
                   <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white mb-6">
                     <img 
-                      src="/images/estefania-perez.jpg" 
+                      src="/images/estefania-perez.png" 
                       alt="Estefanía Pérez Vázquez" 
                       className="w-full h-full object-cover"
                     />

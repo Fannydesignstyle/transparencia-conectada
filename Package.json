@@ -18,7 +18,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && netlify-lambda build src/functions",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "deploy": "npm run build && npm run preview",
     "build:functions": "netlify-lambda build src/functions"

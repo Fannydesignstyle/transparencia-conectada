@@ -10,9 +10,6 @@ const ContactSection = () => {
     subject: '',
     message: ''
   });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,29 +17,6 @@ const ContactSection = () => {
       ...prev,
       [name]: value
     }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Registrar evento de envío de formulario
-    logEvent('Formularios', 'Contacto', 'Formulario de Contacto');
-    
-    // Simulación de envío
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Resetear mensaje de éxito después de 5 segundos
-      setTimeout(() => setIsSubmitted(false), 5000);
-    }, 1500);
   };
 
   return (
@@ -67,13 +41,8 @@ const ContactSection = () => {
               >
                 <h3 className="text-2xl font-bold mb-6 text-primary-blue">Envíanos un mensaje</h3>
                 
-                {isSubmitted ? (
-                  <div className="bg-green-50 text-green-700 p-4 rounded-lg mb-6">
-                    ¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.
-                  </div>
-                ) : null}
-                
-                <form onSubmit={handleSubmit}>
+                <form name="contact" method="POST" data-netlify="true" action="/thank-you">
+                  <input type="hidden" name="form-name" value="contact" />
                   <div className="mb-4">
                     <label htmlFor="name" className="block text-gray-700 mb-2">Nombre completo</label>
                     <input
@@ -129,10 +98,9 @@ const ContactSection = () => {
                   <Button 
                     type="submit" 
                     size="large"
-                    disabled={isSubmitting}
                     className="w-full"
                   >
-                    {isSubmitting ? 'Enviando...' : 'Enviar mensaje'}
+                    Enviar mensaje
                   </Button>
                 </form>
               </motion.div>
@@ -173,9 +141,11 @@ const ContactSection = () => {
                   <div className="mb-8">
                     <h4 className="text-lg font-medium mb-4">QR Institucional</h4>
                     <div className="bg-white p-4 rounded-lg inline-block">
-                      <div className="w-40 h-40 bg-gray-200 flex items-center justify-center">
-                        <span className="text-gray-500 text-xs">Código QR</span>
-                      </div>
+                      <img
+                        src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://transparencia-conectada.vercel.app"
+                        alt="Código QR Institucional"
+                        className="w-40 h-40"
+                      />
                     </div>
                     <p className="mt-3 text-blue-100 text-sm">Escanea para acceder rápidamente a nuestra plataforma</p>
                   </div>

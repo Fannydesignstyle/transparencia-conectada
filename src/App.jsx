@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import OfficialsPage from './pages/OfficialsPage';
 import OfficialProfile from './components/officials/OfficialProfile';
 import NotFound from './pages/NotFound';
+import ThankYou from './pages/ThankYou';
 import CookieBanner from './components/common/CookieBanner';
 
 function AppContent() {
@@ -27,6 +28,7 @@ function AppContent() {
         <Route path="/" element={<HomePage />} />
         <Route path="/funcionarios" element={<OfficialsPage />} />
         <Route path="/funcionarios/:id" element={<OfficialProfile />} />
+        <Route path="/thank-you" element={<ThankYou />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <CookieBanner />

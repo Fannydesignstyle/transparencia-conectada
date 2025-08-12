@@ -55,9 +55,9 @@ const MetricsSection = () => {
     <section className="section">
       <div className="container">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4">Métricas en Tiempo Real</h2>
+          <h2 className="text-3xl font-bold mb-4">Métricas de Impacto</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Monitoreamos el impacto de nuestra plataforma a través de datos actualizados continuamente.
+            Visualizamos el potencial de la plataforma para medir la transparencia y la participación ciudadana.
           </p>
         </div>
         
@@ -89,7 +89,7 @@ const MetricsSection = () => {
         </div>
         
         <div className="mt-12 text-center text-gray-600 text-sm">
-          <p>Datos actualizados en tiempo real con Google Analytics</p>
+          <p>Los datos mostrados son una simulación para demostrar el potencial de la plataforma.</p>
         </div>
       </div>
     </section>

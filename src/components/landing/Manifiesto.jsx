@@ -1,24 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../common/Button';
 import { logEvent } from '../../utils/analytics';
 
 const Manifesto = () => {
-  const [isDownloading, setIsDownloading] = useState(false);
-  
-  const handleDownload = () => {
-    setIsDownloading(true);
-    
-    // Registrar evento de descarga
-    logEvent('Descargas', 'Manifiesto', 'Manifiesto Completo');
-    
-    // Simulación de descarga
-    setTimeout(() => {
-      setIsDownloading(false);
-      alert('Descarga iniciada. En un entorno real, aquí se descargaría el archivo.');
-    }, 1500);
-  };
-
   const manifestoPoints = [
     "Creemos en el poder del diseño para transformar la relación entre instituciones y ciudadanos.",
     "La transparencia no es opcional, es un derecho fundamental que fortalece nuestra democracia.",
@@ -62,15 +47,16 @@ const Manifesto = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <Button 
-              variant="secondary" 
-              size="large"
-              onClick={handleDownload}
-              disabled={isDownloading}
-              className="text-primary-blue border-white hover:bg-white hover:text-primary-blue"
-            >
-              {isDownloading ? 'Descargando...' : 'Descargar manifiesto completo'}
-            </Button>
+            <a href="/manifiesto.pdf" download="Manifiesto-Transparencia-Conectada.pdf">
+              <Button 
+                variant="secondary" 
+                size="large"
+                onClick={() => logEvent('Descargas', 'Manifiesto', 'Manifiesto Completo')}
+                className="text-primary-blue border-white hover:bg-white hover:text-primary-blue"
+              >
+                Descargar manifiesto completo
+              </Button>
+            </a>
           </motion.div>
         </div>
       </div>
