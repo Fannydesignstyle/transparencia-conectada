@@ -22,7 +22,23 @@ Plataforma web diseñada por Fanny Design Style con enfoque institucional y ciud
 - PDF: react-to-print
 
 ## Estructura del Proyecto
-src/ ├── componentes/ │ ├── common/ # Componentes reutilizables │ ├── landing/ # Componentes de la landing page │ └── funcionarios/ # Componentes de fichas institucionales ├── data/ │ └── funcionarios.json # Datos de funcionarios ├── pages/ # Páginas principales ├── utils/ │ └── Analytics.js # Configuración de Google Analytics ├── App.jsx # Componente principal de la aplicación ├── main.jsx # Punto de entrada ├── index.css # Estilos globales └── variables.css # Variables CSS
+
+```
+src/
+├── components/
+│   ├── common/ # Componentes reutilizables
+│   ├── landing/ # Componentes de la landing page
+│   └── officials/ # Componentes de fichas institucionales
+├── data/
+│   └── officials.json # Datos de funcionarios
+├── pages/ # Páginas principales
+├── utils/
+│   └── analytics.js # Configuración de Google Analytics
+├── App.jsx # Componente principal de la aplicación
+├── main.jsx # Punto de entrada
+├── index.css # Estilos globales
+└── variables.css # Variables CSS
+```
 
 
 ## Instalación y Desarrollo
