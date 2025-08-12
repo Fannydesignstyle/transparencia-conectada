@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vite build && netlify-lambda build src/functions",
+    "build": "vite build",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "deploy": "npm run build && npm run preview",
